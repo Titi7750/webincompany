@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page contact{% endblock %}
+
+{% block body %}
+
+    {{ form_start(form, {'attr':{'class':'form'}}) }}
+
+        <div>
+            {{ form_label(form.entreprise) }}
+            {{ form_widget(form.entreprise, {'attr':{'class':'input'}}) }}
+        </div>
+
+        <div>
+            {{ form_label(form.prenom) }}
+            {{ form_widget(form.prenom, {'attr':{'class':'input'}}) }}
+        </div>
+
+        <div>
+            {{ form_label(form.nom) }}
+            {{ form_widget(form.nom, {'attr':{'class':'input'}}) }}
+        </div>
+
+        <div>
+            {{ form_label(form.email) }}
+            {{ form_widget(form.email, {'attr':{'class':'input'}}) }}
+        </div>
+
+        <div>
+            {{ form_label(form.message) }}
+            {{ form_widget(form.message, {'attr':{'class':'input'}}) }}
+        </div>
+
+        <div>
+            {{ form_widget(form.submit, {'attr':{'class':'button'}}) }}
+        </div>
+
+    {{ form_end(form) }}
+
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}">
+{% endblock %}
